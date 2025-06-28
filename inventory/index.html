@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!--We add meta tags-->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="This is a website where you can use a CRUD for products of your election.">
@@ -9,70 +10,64 @@
     <meta name="organization" content="giselle-01">
     <meta name="author" content="Giselle Andrea Palencia Toro">
     <meta name="designer" content="Giselle Andrea Palencia Toro">
-    <meta name="copyright" content="© 2025. All rights reserved">
+    <meta name="copyright" content="© 2025 giselle-01. All rights reserved">
     <meta name="robots" content="index,follow">
     <meta name="googlebot" content="index,follow">
     <meta name="revisit-after" content="15days">
     <meta name="theme-color" content="#ffffff">
-  <title>Document</title>
+  <title>Data Management</title>
   
 </head>
 <body>
+<!--We welcome the user-->
   <header>
-    <h1>Bienvenido al Sistema de Gestion</h1>
-
-    <nav>
-      <ul>
-        <li><a href="#showProducts">Ver los productos</a></li>
-        <li><a href="#addProducts">Agregar nuevos productos</a></li>
-        <li><a href="#updateProducts">Actualizar los productos </a></li>
-        <li><a href="#deleteProducts">Eliminar los productos</a></li>
-        
-      </ul>
-    </nav>
+    <h1>Bienvenido al Sistema de Gestión</h1>
   </header>
 
   <main>
-    <section id="showProducts">
-      <h2>Productos</h2>
-
-      <p id="productsTable"></p>
-      <p id="productsList"></p>
-      <p id="productsMap"></p>
-
-    </section>
-
+<!--This section is for add product's information-->
     <section id="addProducts">
-      <h2>Ingrese su Producto</h2>
-      
-      <label for="product-name">Nombre del producto</label>
-      <input type="text" id="product-name" name="product-name">
+      <h2>Añada su Producto</h2>
 
-      <label for="product-name">Precio del producto</label>
-      <input type="text" id="product-name" name="product-name">
+      <p>Por favor ingrese el nombre que desee del producto, su precio y su código.</p><br>
 
-      <label for="product-name">Clave del producto</label>
-      <input type="text" id="product-name" name="product-name">
+      <form id="productsInfo">
+        <label for="productName">Nombre del producto</label>
+        <input type="text" id="productName" name="productName"><br><br>
 
+        <label for="productPrice">Precio del producto</label>
+        <input type="number" id="productPrice" name="productPrice"><br><br>
+
+        <label for="productCode">Código del producto</label>
+        <input type="number" id="productCode" name="productCode"><br><br>
+
+        <label for="productCategory">Categoría del producto</label>
+        <input type="text" id="productCategory" name="productcategory"><br><br>
+
+        <button id="btnSend" type="submit">Enviar</button>
+
+      </form>
     </section>
-
-    <section id="updateProducts">
-      <h2>Actualizar Productos</h2>
+    
+    <section id="showProducts">
       
-      <label for="product-name">Nombre del producto</label>
-      
-      <input type="text" id="product-name" name="product-name">
+    <h2>Productos</h2>
+      <table> 
+        <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Código</th>
+              <th>Categoría</th>
+              <th>Editar/Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="productsTable">
+        </tbody>
+      </table>
     </section>
-
-    <section ide="deleteProducts">
-      <h2>Eliminar productos</h2>
-      
-      <label for="product-name">Nombre del producto</label>
-      
-      <input type="text" id="product-name" name="product-name">
-    </section>
-
   </main>
+
   <script type="module" src="./src/js/gestion_datos.js"></script>
 </body>
 </html>
