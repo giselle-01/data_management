@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!--We add meta tags-->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="This is a website where you can use a CRUD for products of your election.">
+    <meta name="keywords" content="products, price, create, read, update, delete.">
+    <meta name="sitedomain" content="aca pones la url del sitio o del github">
+    <meta name="organization" content="giselle-01">
+    <meta name="author" content="Giselle Andrea Palencia Toro">
+    <meta name="designer" content="Giselle Andrea Palencia Toro">
+    <meta name="copyright" content="© 2025 giselle-01. All rights reserved">
+    <meta name="robots" content="index,follow">
+    <meta name="googlebot" content="index,follow">
+    <meta name="revisit-after" content="15days">
+    <meta name="theme-color" content="#ffffff">
+  <title>Data Management</title>
+  
+</head>
+<body>
+<!--We welcome the user-->
+  <header>
+    <h1>Bienvenido al Sistema de Gestión</h1>
+  </header>
+
+  <main>
+<!--This section is for add product's information-->
+    <section id="addProducts">
+      <h2>Añada su Producto</h2>
+
+      <p>Por favor ingrese el nombre que desee del producto, su precio y su código.</p><br>
+
+      <form id="productsInfo">
+        <label for="productName">Nombre del producto</label>
+        <input type="text" id="productName" name="productName"><br><br>
+
+        <label for="productPrice">Precio del producto</label>
+        <input type="number" id="productPrice" name="productPrice"><br><br>
+
+        <label for="productCode">Código del producto</label>
+        <input type="number" id="productCode" name="productCode"><br><br>
+
+        <label for="productCategory">Categoría del producto</label>
+        <input type="text" id="productCategory" name="productcategory"><br><br>
+
+        <button id="btnSend" type="submit">Enviar</button>
+
+      </form>
+    </section>
+    
+    <section id="showProducts">
+      
+    <h2>Productos</h2>
+      <table> 
+        <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Precio</th>
+              <th>Código</th>
+              <th>Categoría</th>
+              <th>Editar/Eliminar</th>
+            </tr>
+        </thead>
+        <tbody id="productsTable">
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <script type="module" src="./src/js/gestion_datos.js"></script>
+</body>
+</html>
